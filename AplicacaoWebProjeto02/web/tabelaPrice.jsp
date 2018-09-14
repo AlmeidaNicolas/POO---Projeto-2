@@ -26,6 +26,10 @@
                 double emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
                 double juros = Double.parseDouble(request.getParameter("juros"));
                 double meses = Double.parseDouble(request.getParameter("meses"));
+                double parcela = 0;
+                double amortizacao = 0;
+                double saldo = 0;
+                double jurosatual = 0;
             %>    
             <table>
                 <tr>
