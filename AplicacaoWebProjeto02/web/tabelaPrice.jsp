@@ -9,10 +9,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <%@include file="WEB-INF/jspf/cabecalho.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Tabela Price</title>
     </head>
     <body>
+        <%@include file="WEB-INF/jspf/menu.jspf" %>
         <h1>Calculo Tabela Price</h1>
         <form>
             Valor Emprestimo: <input type="text" name="emprestimo" />
@@ -51,6 +53,6 @@
             
             
 
-            
+        <%@include file="WEB-INF/jspf/rodape.jspf" %>            
     </body>
 </html>

@@ -1,0 +1,21 @@
+a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+}
+
+body{
+    background-color: steelblue;
+}
+
+h1{
+    font: serif;
+    text-align: center;
+    color: orange;
+}
+
+.introducao{
+    font: serif;
+    text-height: 14px;
+    text-align: center;
+}
