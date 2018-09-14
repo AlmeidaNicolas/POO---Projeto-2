@@ -11,11 +11,11 @@
     <head>
         <%@include file="WEB-INF/jspf/cabecalho.jspf" %>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Amortização Constante</title>
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h1>Hello World!</h1>
+        
         <%@include file="WEB-INF/jspf/rodape.jspf" %>
         <h1>Amortização Constante</h1>
         <form>
