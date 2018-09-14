@@ -12,6 +12,12 @@
         <title>Tabela Price</title>
     </head>
     <body>
-        <h1>Teste Tabela Price</h1>
+        <h1>Calculo Tabela Price</h1>
+        <form>
+            <input type="text" name="emprestimo" />
+            <input type="text" name="juros" />
+            <input type="text" name="meses" />
+            <input type="submit" value="Calcular" />
+        </form>
     </body>
 </html>
