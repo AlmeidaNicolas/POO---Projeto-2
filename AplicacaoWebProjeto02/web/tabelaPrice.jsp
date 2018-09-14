@@ -31,7 +31,7 @@
                 double parcela = 0;
                 double amortizacao = 0;
                 double saldo = 0;
-                double jurosatual = 0;
+                
             %>    
             <table>
                 <tr>
@@ -47,9 +47,26 @@
                     <td></td>
                     <td></td>
                     <td><%= NumberFormat.getCurrencyInstance().format(emprestimo)%></td>
+                <tr>
+                    <%
+                        parcela = emprestimo * (juros/ (1-(1/(Math.pow((1+juros),meses)))));
+                        for (int i=1; i<=meses; i++){
+                            double jurostabela = emprestimo * juros;
+                            amortizacao = parcela - jurostabela;
+                            saldo = emprestimo - amortizacao;
+                            
+                        
+                        %>
+                        <th><%= i%></th>
+                        <td><%= NumberFormat.getCurrencyInstance().format(parcela) %></td>
+                            <td><%= NumberFormat.getCurrencyInstance().format(jurostabela) %></td>
+                            <td><%= NumberFormat.getCurrencyInstance().format(amortizacao) %></td>
+                            <td><%= NumberFormat.getCurrencyInstance().format(saldo) %></td>
                 </tr>
-            <%}%> 
+                <%}%>
+             
             </table>
+                <%}%>
             
             
 
