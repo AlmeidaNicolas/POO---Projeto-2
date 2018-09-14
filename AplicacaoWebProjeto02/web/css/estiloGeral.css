@@ -1,3 +1,4 @@
+<!--CABEÇALHO E MENU-->
 a{
     color: black;
     text-decoration: none;
@@ -8,14 +9,75 @@ body{
     background-color: steelblue;
 }
 
+
+<!--TÍTULO DE PÁGINA-->
 h1{
-    font: serif;
+    font-family: serif;
     text-align: center;
-    color: orange;
+    color: yellow;
 }
 
+<!--PÁGINA HOME-->
 .introducao{
-    font: serif;
-    text-height: 14px;
+    font-family: serif;
+    font-size: 18px;
     text-align: center;
+}
+
+.divObjetivo{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 230px;
+    margin-right: 230px;
+    
+}
+
+.objetivo{
+    font-family: serif;
+    font-size: 20px;
+    text-align: justify;
+    width: 550px;
+}
+<!--PÁGINA PRICE-->
+.divPrice{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 230px;
+    margin-right: 230px;
+}
+
+.txtPrice1{
+    font-family: serif;
+    font-size: 20px;
+    text-align: justify;
+    width: 550px;
+}
+
+.txtPrice2{
+    font-family: serif;
+    font-size: 18px;
+    text-align: justify;
+    width: 550px;
+}
+
+.price{
+    display: inline-block;
+    width: 150px;
+}
+
+<!--RODAPÉ-->
+.divFooter{
+    position: static;
+    border-top: 1px black solid;
+    width: 1000px;
+}
+
+footer{
+    font-family: serif;
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    clear: both;
+    display: block;
+    
 }

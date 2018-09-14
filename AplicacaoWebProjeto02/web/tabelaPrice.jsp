@@ -15,13 +15,40 @@
     </head>
     <body>
         <%@include file="WEB-INF/jspf/menu.jspf" %>
-        <h1>Calculo Tabela Price</h1>
-        <form>
-            Valor Emprestimo: <input type="text" name="emprestimo" />
-            Taxa Juros (%):<input type="text" name="juros" />
-            Meses <input type="text" name="meses" />
-            <input type="submit" name="calcular" value="Calcular" />
-        </form>
+        <h1>O que é Tabela Price?</h1>
+        
+        <div class="divPrice">
+            <p class="txtPrice1">
+                Também chamado de sistema francês de amortização,
+                é um método usado em amortização de empréstimo 
+                cuja principal característica é apresentar prestações
+                (ou parcelas) iguais. O método foi apresentado em 1771
+                por Richard Price em sua obra "Observações sobre 
+                Pagamentos Remissivos".
+
+                O método foi idealizado pelo seu autor para pensões e 
+                aposentadorias. No entanto, foi a partir da 
+                2ª revolução industrial que sua metodologia de 
+                cálculo foi aproveitada para cálculos de amortização 
+                de empréstimo.
+            </p>
+        
+            <h2>Cálculo da Tabela Price</h2>
+            <p class="txtPrice2">
+                A tabela Price usa o regime de juros compostos para 
+                calcular o valor das parcelas de um empréstimo e, 
+                dessa parcela, há uma proporção relativa ao pagamento 
+                de juros e amortização do valor emprestado.
+            </p>
+            
+            <form class="price">
+                Valor Emprestimo: <input type="text" name="emprestimo" />
+                Taxa Juros (%):<input type="text" name="juros" />
+                Meses <input type="text" name="meses" />
+                <input type="submit" name="calcular" value="Calcular" />
+            </form>
+        </div>
+        
         <%
             if(request.getParameter("calcular")!=null){
                 
