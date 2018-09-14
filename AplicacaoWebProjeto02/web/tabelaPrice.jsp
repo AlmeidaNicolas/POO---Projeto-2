@@ -27,13 +27,16 @@
                 
                 double emprestimo = Double.parseDouble(request.getParameter("emprestimo"));
                 double juros = Double.parseDouble(request.getParameter("juros"));
+                juros = juros/100;
                 double meses = Double.parseDouble(request.getParameter("meses"));
                 double parcela = 0;
                 double amortizacao = 0;
                 double saldo = 0;
+                double jurostabela = 0;
+                double jurosatual = 0;
                 
             %>    
-            <table>
+            <table border="1">
                 <tr>
                     <th>Meses</th>
                     <th>Parcela</th>
@@ -42,27 +45,29 @@
                     <th>Saldo Devedor</th>
                 </tr>
                 <tr>
-                    <td>0</td>
+                    <th>0</th>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td><%= NumberFormat.getCurrencyInstance().format(emprestimo)%></td>
                 <tr>
                     <%
-                        parcela = emprestimo * (juros/ (1-(1/(Math.pow((1+juros),meses)))));
+                        parcela = emprestimo * (juros/(1-(1/(Math.pow((1+juros),meses)))));
                         for (int i=1; i<=meses; i++){
-                            double jurostabela = emprestimo * juros;
+                            jurostabela = emprestimo * juros;
                             amortizacao = parcela - jurostabela;
                             saldo = emprestimo - amortizacao;
+                            
                             
                         
                         %>
                         <th><%= i%></th>
                         <td><%= NumberFormat.getCurrencyInstance().format(parcela) %></td>
-                            <td><%= NumberFormat.getCurrencyInstance().format(jurostabela) %></td>
-                            <td><%= NumberFormat.getCurrencyInstance().format(amortizacao) %></td>
-                            <td><%= NumberFormat.getCurrencyInstance().format(saldo) %></td>
+                        <td><%= NumberFormat.getCurrencyInstance().format(jurostabela) %></td>
+                        <td><%= NumberFormat.getCurrencyInstance().format(amortizacao) %></td>
+                        <td><%= NumberFormat.getCurrencyInstance().format(saldo) %></td>
                 </tr>
+                <%emprestimo = emprestimo - amortizacao;%>
                 <%}%>
              
             </table>
